@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const date1 = new Date(2024, 0, 16);
+    const date2 = new Date(2024, 0, 17);
+    
+    function dateCompare(){
+      let date1Div = document.createElement("div");
+      date1Div.innerHTML = `Date 1: ${date1.toDateString()}`;
+      document.body.appendChild(date1Div);
+      
+      let date2Div = document.createElement("div");
+      date2Div.innerHTML = `Date 2: ${date2.toDateString()}`;
+      document.body.appendChild(date2Div);
+      
+      const resultDiv = document.createElement("div");
+      
+      if (date1 > date2){
+        resultDiv.innerHTML = "<br><strong> Date 1 is later than Date 2 </strong>";
+      } else if (date1 < date2){
+        resultDiv.innerHTML = "<br><strong>Date 2 is later than Date 1 </strong>";
+      } else{
+        resultDiv.innerHTML = "Both dates are equal";
+      }
+      document.body.appendChild(resultDiv);
+    }
+    dateCompare();
+    
+  </script>
+</body>
+</html>
